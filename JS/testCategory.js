@@ -125,15 +125,33 @@ listChosenCategory = () => {
 }
 
 saveCategoryAndNewPage = (category) => {
+    
+    saveUsername(document.getElementById("nameTest").value)
+    saveLocation(document.getElementById("locationTest").value)
+
     localStorage.setItem('chosenCategory', category)
     window.location.href = 'categoryTestFrameTwo.html'
 }
 
 testChosenCategory = () => {
-    console.log('Reaching the final test.')
+    //console.log('Reaching the final test.')
     finalCategory = localStorage.getItem('chosenCategory')
 
     console.log(finalCategory)
+}
+
+saveUsername = (name) => {
+    localStorage.setItem('username', name)
+}
+
+saveLocation = (yourLocation) => {
+    localStorage.setItem('yourLocation', yourLocation)
+}
+
+testSavedNameAndLocation = () => {
+    name = localStorage.getItem('username')
+    yourLocation = localStorage.getItem('yourLocation')
+    console.log("You are " + name + " and you are at " + yourLocation + " this location!")
 }
 
 
