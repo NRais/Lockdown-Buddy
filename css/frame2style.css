@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+}
+
+/* Schedule Section */
+#times{
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-gap: 20px;
+}
+
+.timeslot{
+    width: 120px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timeslot .time{
+    height: 50%;
+    width: 100%;
+    background: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeslot .activityArea{
+    height: 50%;
+    width: 100%;
+    background: #D6DCEA;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Activities Section */
+#activities{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "draggables draggables info";
+}
+
+.draggables{
+    grid-area: draggables;
+}
+
+.info{
+    grid-area: info;
+}
+
+.draggable{
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
