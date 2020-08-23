@@ -61,6 +61,71 @@ function drawWeather(data) {
 //     accessToken: 'pk.eyJ1IjoiY3J1bmNoeXBhbmNha2VzIiwiYSI6ImNrM25temk0YzFzMjMzcHM3bWdocXZuOXgifQ.m6zMp4CxLPXi5xp-zB1kkg'
 // }).addTo(mymap);
 
+
+/* Drag and Drop Code */
+var draggedItem;
+
+function dragStart(){
+  console.log("dragstart");
+  draggedItem = this;
+  console.log(draggedItem);
+}
+
+function dragEnter(){
+  console.log("dragenter");
+  this.classList.add("over");
+}
+
+function dragLeave(){
+  console.log("dragleave");
+  this.classList.remove("over");
+}
+
+function dragOver(e){
+  e.preventDefault();
+}
+
+function dragDrop(){
+  console.log("drop");
+
+  var dropItem = this;
+  console.log(dropItem);
+
+  placeItem(draggedItem, dropItem);
+
+  this.classList.remove("over");
+}
+
+function placeItem(draggedItem, dropItem){
+  dropItem.innerHTML = draggedItem.innerHTML;
+}
+
+/* Add Event Listeners */
+var draggables = document.querySelectorAll(".draggable");
+var dragDropAreas = document.querySelectorAll(".dragDropArea");
+
+function dragOver(e){
+  e.preventDefault();
+}
+function dragDrop(){
+  console.log("drop");
+}
+/* Add Event Listeners */
+var draggables = document.querySelectorAll(".draggable");
+console.log(draggables);
+var dragDropAreas = document.querySelectorAll(".dragDropArea");
+draggables.forEach(item => {
+  item.addEventListener("dragstart", dragStart);
+  console.log(item);
+})
+
+dragDropAreas.forEach(item => {
+  item.addEventListener("dragover", dragOver);
+  item.addEventListener("drop", dragDrop);
+  item.addEventListener("dragenter", dragEnter);
+  item.addEventListener("dragleave", dragLeave);
+})
+
 // var mymap = L.map('map).setView([-41.28664, 174.77557], 13);
 
 // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
