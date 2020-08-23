@@ -16,15 +16,13 @@
 
   <body>
     <div class="hero-nav">
-
       <!-- logo, text and button -->
-       <img class="logo" src="../resources/logo.png" alt="custom_html_logo1">
+      <img class="logo" src="../resources/logo.png" alt="custom_html_logo1" />
 
-    
-        <button class="b1" type="button" style="right:40%">Home</button>
-        <button class="b1" type="button" style="right:30%">About</button>
-        <button class="b1" type="button" style="right:20%">Login</button>
-        <button class="b1" type="button" style="right:10%">Help</button>
+      <button class="b1" type="button" style="right: 40%;">Home</button>
+      <button class="b1" type="button" style="right: 30%;">About</button>
+      <button class="b1" type="button" style="right: 20%;">Login</button>
+      <button class="b1" type="button" style="right: 10%;">Help</button>
     </div>
 
     <div id="main">
@@ -32,41 +30,52 @@
         <div>
           <h2>Hello, how is your mood today?</h2>
         </div>
-        
+
         <form id="icons-moods">
-          <!-- <i class="fas fa-angry"></i> -->
-          <input
+          <!-- energetic -->
+          <button
             type="button"
             id="Energetic"
-            class="Energetic"
+            class="Energetic btn-mood"
             name="Energetic"
-            value="Energetic"
             onclick="pickEmotion(this.id)"
-          />
-          <input
+          >
+            <i class="far fa-meh-rolling-eyes mood-icon"></i>Energetic
+          </button>
+
+          <!-- mental -->
+          <button
             type="button"
             id="Smart"
-            class="Smart"
+            class="Smart btn-mood"
             name="Smart"
-            value="Mental"
             onclick="pickEmotion(this.id)"
-          />
-          <input
+          >
+            <i class="far fa-meh-rolling-eyes mood-icon"></i>Mental
+          </button>
+
+          <!-- wild -->
+          <button
             type="button"
             id="Wild"
-            class="Wild"
+            class="Wild btn-mood"
             name="Wild"
-            value="Wild"
             onclick="pickEmotion(this.id)"
-          />
-          <input
+          >
+            <i class="far fa-tired mood-icon"></i>Wild
+          </button>
+
+          <!-- jittery -->
+          <button
             type="button"
             id="Jittery"
-            class="Jittery"
+            class="Jittery btn-mood"
             name="Jittery"
-            value="Jittery"
             onclick="pickEmotion(this.id)"
-          />
+          >
+            <i class="far fa-grimace mood-icon"></i>Jittery
+          </button>
+
         </form>
         <div>
           <label> Enter Your Name: </label>
@@ -76,10 +85,9 @@
           <input id="locationName" type="text" />
         </div>
 
-        <button onclick="chooseCategory()">ENTER RESULTS</button>
+        <button class="btn-result" onclick="chooseCategory()">ENTER RESULTS</button>
       </div>
     </div>
-
 
     <!-- SCRIPTS  -->
     <script src="../JS/scripts.js"></script>
