@@ -160,9 +160,14 @@ testChosenCategory = () => {
     console.log(chosenCategory)
 }
 
+/*
+
+THIS FUNCTION HAS THE PROBLEM. ONLY WORKS IF THE CHOSEN CATEGORY IS PHYSICAL.
+
+*/
+
 setTasksToChosenCategory = () => {
     finalCategory = localStorage.getItem('chosenCategory')
-    console.log(finalCategory)
 
     for(i = 0; i < activities.length; i++){
         currentID = i.toString() 
@@ -170,11 +175,11 @@ setTasksToChosenCategory = () => {
         currentActivityButton = document.getElementById("activity" + currentID).innerHTML
 
         if (currentActivityButton != null) {
+            console.log(finalCategory, activities[i].category)
 
-            if (activities[i].category == finalCategory) {
-                document.getElementById("activity" + currentID).innerHTML = activities[i].activityName;  
-            } else {
-                return;
+            if (activities[i].category == finalCategory) {            
+                document.getElementById("activity" + currentID).innerHTML = activities[i].activityName;
+                return;  
             }     
         } else {
             return;
