@@ -1,12 +1,22 @@
 /*----- FRAME-1 Styles -----*/
-/* Navbar */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body, h1{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+#nav-container{
+  margin-bottom: 50px;
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #3e599d;
+  background-color: #6aa6ed;
 }
 
 li {
@@ -33,8 +43,13 @@ li a:hover:not(.active) {
 .active {
   background-color: #3e599d;
 }
-/* Form */
-#form-1{
+/* Inputs */
+#inputs{
+  height: 300px;
+  width: 500px;
+  border: 2px solid #3e599d;
+  border-radius: 8px;
+  padding: 20px;
   margin-top: 50px;
   margin: auto;
   width: 400px;
