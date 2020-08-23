@@ -14,7 +14,7 @@
     align-items: center;
     height: 100px;
     min-height: 105px;
-    background-image: linear-gradient(red, yellow); /* TODO right color */
+    background-image: linear-gradient(blue, white); /* TODO right color */
     background-size: cover;
     background-position: center;
     overflow: hidden;
