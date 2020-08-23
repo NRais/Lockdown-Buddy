@@ -71,6 +71,7 @@ chooseCategory = () => {
     mentalCategory = 0;
     emotionalCategory = 0;
 
+
     emotions.map( currentEmotion => {
         if (currentEmotion.emotionCategory.includes(physicalCategoryVar)) {
             if (currentEmotion.emotionPicked == true) {
@@ -95,6 +96,7 @@ chooseCategory = () => {
 }
 
 chooseEmotionsPicked = (physical, mental, emotional) => {
+    console.log('reaching near the switch.')
     //function should check through the emotions and see if they have been clicked.
     sortMe = [physical, mental, emotional]
     chosenCategory = sortMe.sort((a, b) => b - a);
@@ -126,8 +128,8 @@ listChosenCategory = () => {
 
 saveCategoryAndNewPage = (category) => {
     
-    saveUsername(document.getElementById("nameTest").value)
-    saveLocation(document.getElementById("locationTest").value)
+    saveUsername(document.getElementById("cityName").value)
+    saveLocation(document.getElementById("locationName").value)
 
     localStorage.setItem('chosenCategory', category)
     window.location.href = 'categoryTestFrameTwo.html'
