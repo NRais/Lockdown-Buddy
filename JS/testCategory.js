@@ -4,22 +4,22 @@ emotionalCategoryVar = 'emotional'
 
 activities = [
     {
-        activityName: 'Running',
+        activityName: 'RUNNING',
         outdoorsRequired: true,
         category: physicalCategoryVar 
     },
     {
-        activityName: 'Basketball',
+        activityName: 'BASKETBALL',
         outdoorsRequired: true,
         category: physicalCategoryVar
     },
     {
-        activityName: 'Scrabble',
+        activityName: 'SCRABBLE',
         outdoors: false,
         category: mentalCategoryVar
     },
     {
-        activityName: 'Meditation',
+        activityName: 'MEDITATION',
         outdoors: false,
         category: emotionalCategoryVar
     }        
@@ -162,6 +162,7 @@ testChosenCategory = () => {
 
 setTasksToChosenCategory = () => {
     finalCategory = localStorage.getItem('chosenCategory')
+    console.log(finalCategory)
 
     for(i = 0; i < activities.length; i++){
         currentID = i.toString() 
