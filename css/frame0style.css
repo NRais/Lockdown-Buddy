@@ -1,0 +1,45 @@
+#map{
+    height: 500px;
+    width: 500px;
+}
+
+.row {
+    padding-top: 100px; /* avoid banner up top */
+    display: flex;
+  }
+  
+.column {
+    padding-top: 100px; /* avoid banner up top */
+    flex: 50%;
+    text-align: center;
+}
+
+.bannertext {
+    font-family: Arvo;
+    font-weight: bold;
+    font-size: 145px;
+    color: #599CEB;
+
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.subtext {
+    font-family: Cookie;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+
+    position: relative;
+
+    color: #599CEB;
+}
+
+.underbannertext {
+    position: fixed;
+    bottom: 10%;
+    padding-left: 80px;
+
+}
+

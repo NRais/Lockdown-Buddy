@@ -104,6 +104,16 @@ function placeItem(draggedItem, dropItem){
 var draggables = document.querySelectorAll(".draggable");
 var dragDropAreas = document.querySelectorAll(".dragDropArea");
 
+function dragOver(e){
+  e.preventDefault();
+}
+function dragDrop(){
+  console.log("drop");
+}
+/* Add Event Listeners */
+var draggables = document.querySelectorAll(".draggable");
+console.log(draggables);
+var dragDropAreas = document.querySelectorAll(".dragDropArea");
 draggables.forEach(item => {
   item.addEventListener("dragstart", dragStart);
   console.log(item);
