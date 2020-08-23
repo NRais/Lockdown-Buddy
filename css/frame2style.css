@@ -1,79 +1,29 @@
-.body {
-  
-}
-
-/**
-*
-* HEADER
-* 
-**/
-.hero-nav{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    height: 100px;
-    min-height: 105px;
-    background-image: url(../resources/header.png);
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    
-}
-.logo {
-    top: 60%;
-    height: 60%;
-    justify-self: left;
-}
-
-.banner__text {
-    
-    padding-right: 80px;
-    padding-left: 80px;
-    font: 1em sans-serif;
-}
-
-/* header buttons */
-.b1 {
-    
-    float: right;
-
-    background-color: #ff0000;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 25px; /* curved edges */
-}
-
 
 /**
 * PAGE
 **/
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-body{
+body, h1{
     margin: 0;
     padding: 0;
 }
-
 .container{
     font-family: 'Lato', sans-serif;
     padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
 /* Schedule Section */
 #times{
-    display: grid;
-    grid-template-columns: repeat(5, 120px);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
 }
-
 .timeslot{
     width: 120px;
     height: 60px;
@@ -83,8 +33,8 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 20px;
 }
-
 .timeslot .time{
     height: 50%;
     width: 100%;
@@ -95,36 +45,39 @@ body{
     align-items: center;
     justify-content: center;
 }
-
-.timeslot .activityArea{
+.timeslot .dragDropArea{
     height: 50%;
     width: 100%;
-    background: #D6DCEA;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
-
+.dragDropArea{
+    background-color: #D6DCEA;
+}
 /* Activities Section */
 #activities{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "draggables draggables info";
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
 }
-
 .draggables{
-    grid-area: draggables;
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-gap: 20px;
 }
-
-.info{
-    grid-area: info;
-}
-
 .draggable{
-    padding: 10px;
-    border: 1px solid black;
+    width: 120px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+.over{
+    background-color: #555;
 }
 
 
