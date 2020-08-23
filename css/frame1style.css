@@ -1,10 +1,10 @@
 /*----- FRAME-1 Styles -----*/
 
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-body, h1{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+body,
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -17,7 +17,7 @@ ul {
 
 li {
   float: left;
-  border-right:1px solid #bbb;
+  border-right: 1px solid #bbb;
 }
 
 li:last-child {
@@ -40,7 +40,7 @@ li a:hover:not(.active) {
   background-color: #3e599d;
 }
 /* Inputs */
-#inputs{
+#inputs {
   height: 300px;
   width: 500px;
   border: 2px solid #3e599d;
@@ -53,4 +53,27 @@ li a:hover:not(.active) {
 
 #main {
   margin-top: 150px;
+}
+
+.btn-mood {
+  background-color: white;
+  color: blue;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 2px;
+}
+.mood-icon {
+  margin-right: 9px;
+}
+
+.btn-result {
+  background-color: white;
+  color: blue;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 2px;
 }
