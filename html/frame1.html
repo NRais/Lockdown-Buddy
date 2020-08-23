@@ -1,32 +1,68 @@
 <html lang="en">
-  
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>The Lockdown Buddy</title>
-  <meta name="description" content="Lockdown Buddy">
-  <meta name="author" content="Lockdown Avengers">
+    <title>The Lockdown Buddy</title>
+    <meta name="description" content="Lockdown Buddy" />
+    <meta name="author" content="Lockdown Avengers" />
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="../css/styles.css?v=1.0" />
+  </head>
 
-</head>
+  <body>
+    <div id="nav-container">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li style="float: right;"><a href="#about">About</a></li>
+        </ul>
+    </div>
+    <div id="main">
+      
+      <form id="form-1">
+        <input type="button" id="Energetic" class="Energetic" name="Energetic" value="Energetic" onclick="pickEmotion(this.id)" />
+        <input type="button" id="Smart" class="Smart" name="Smart" value="Mental" onclick="pickEmotion(this.id)" />
+        <input type="button" id="Wild" class="Wild" name="Wild" value="Wild" onclick="pickEmotion(this.id)" />
+        <input type="button" id="Jittery" class="Jittery" name="Jittery" value="Jittery" onclick="pickEmotion(this.id)" />
 
-<body>
-    <div>
+
+      <div>
+      </form>
+
+        <label> Enter Your Name: </label> 
+        <input id="cityName" type="text" />
+        <br />
+        <label> Enter Your Location: </label>
+        <input id="locationName" type="text" />
+      </div>
+
+      <button onclick="chooseCategory()"> ENTER RESULTS </button>
+
+
+      <div id="weather" style="display: none;">
+      <hr />
+      <div id="description"></div>
+      <h1 id="temp"></h1>
+      <div id="location"></div>
+    </div>
+    </div>
+
+    <!-- <div>
       <h3>Sample Weather Function based on Location</h3>
       Enter Your City: <input id="cityName" type="text" />
       <input type="submit" onclick="submitLocation()" />
     </div>
     <br />
     <div id="weather" style="display: none;">
-      <hr>
+      <hr />
       <div id="description"></div>
       <h1 id="temp"></h1>
       <div id="location"></div>
-    </div>
+    </div> -->
 
     <!-- SCRIPTS  -->
-  <script src="JS/scripts.js"></script>
-</body>
+    <script src="../JS/scripts.js"></script>
+    <script src="../JS/testCategory.js"></script>
+  </body>
 </html>
-

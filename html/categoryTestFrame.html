@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Lockdown Buddy</title>
+  <meta name="description" content="Lockdown Buddy">
+  <meta name="author" content="Lockdown Avengers">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+
+        <input type="button" id="Energetic" class="Energetic" name="Energetic" value="Energetic" onclick="pickEmotion(this.id)" />
+        <input type="button" id="Smart" class="Smart" name="Smart" value="Mental" onclick="pickEmotion(this.id)" />
+        <input type="button" id="Wild" class="Wild" name="Wild" value="Wild" onclick="pickEmotion(this.id)" />
+        <input type="button" id="Jittery" class="Jittery" name="Jittery" value="Jittery" onclick="pickEmotion(this.id)" />
+
+        <button onclick="chooseCategory()"> ENTER RESULTS </button>
+
+        <div>
+            <p class="results"> this should be results! </p>
+        </div>
+
+    <button onclick="testButton()"> Secret Debug Button </button>
+
+    <div id="input-testing">
+      <input id="nameTest" type="text" />
+      <input id="locationTest" type="text" />
+    </div>
+
+  <script src="../JS/testCategory.js"></script>
+</body>
+</html>
