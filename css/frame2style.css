@@ -60,9 +60,7 @@ body, h1{
 .dragDropArea{
     background-color: #D6DCEA;
 }
-.dragDropArea{
-    background-color: #D6DCEA;
-}
+
 /* Activities Section */
 #activities{
     display: flex;
