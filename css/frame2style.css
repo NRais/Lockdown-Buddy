@@ -4,6 +4,7 @@
 **/
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body, h1{
     margin: 0;
     padding: 0;
@@ -45,11 +46,19 @@ body, h1{
     align-items: center;
     justify-content: center;
 }
+
 .timeslot .dragDropArea{
     height: 50%;
     width: 100%;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dragDropArea{
+    background-color: #D6DCEA;
 }
 .dragDropArea{
     background-color: #D6DCEA;
@@ -75,9 +84,7 @@ body, h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+
 .over{
     background-color: #555;
 }
-
-
