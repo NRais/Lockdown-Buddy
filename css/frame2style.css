@@ -1,4 +1,3 @@
-
 .body {
   
 }
@@ -58,7 +57,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-body{
+body, h1{
     margin: 0;
     padding: 0;
 }
@@ -66,13 +65,19 @@ body{
 .container{
     font-family: 'Lato', sans-serif;
     padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Schedule Section */
 #times{
-    display: grid;
-    grid-template-columns: repeat(5, 120px);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
 }
 
 .timeslot{
@@ -84,6 +89,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 20px;
 }
 
 .timeslot .time{
@@ -97,33 +103,45 @@ body{
     justify-content: center;
 }
 
-.timeslot .activityArea{
+.timeslot .dragDropArea{
     height: 50%;
     width: 100%;
-    background: #D6DCEA;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dragDropArea{
+    background-color: #D6DCEA;
 }
 
 /* Activities Section */
 #activities{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "draggables draggables info";
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
 }
 
 .draggables{
-    grid-area: draggables;
-}
-
-.info{
-    grid-area: info;
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-gap: 20px;
 }
 
 .draggable{
-    padding: 10px;
-    border: 1px solid black;
+    width: 120px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.over{
+    background-color: #555;
 }
