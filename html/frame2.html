@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body onload="setTasksToChosenCategory();">
   <div class="hero-nav">
 
     <!-- logo, text and button -->
@@ -36,7 +36,7 @@
 
   
 <div class="container">
-    <h1>Let's settle your schedule for today:</h1>
+    <h1 onclick="setTasksToChosenCategory()">Let's settle your schedule for today:</h1>
     <div id="schedule">
       <div id="times">
         <div class="timeslot">
@@ -85,11 +85,11 @@
   <p>Just drag and drop these cool things to your schedule!</p>
       <div id="activities">
         <div class="draggables">
-            <div class="draggable" draggable="true">Meditate</div>
-            <div class="draggable" draggable="true">Swim</div>
-            <div class="draggable" draggable="true">Walk</div>
-            <div class="draggable" draggable="true">Yoga</div>
-            <div class="draggable" draggable="true">Breathing</div>
+            <div id="activity0" class="draggable" draggable="true">Meditate</div>
+            <div id="activity1" class="draggable" draggable="true">Swim</div>
+            <div id="activity2" class="draggable" draggable="true">Walk</div>
+            <div id="activity3" class="draggable" draggable="true">Yoga</div>
+            <div id="activity4" class="draggable" draggable="true">Breathing</div>
         </div>
       </div>
     </div>
@@ -97,6 +97,8 @@
   
 
   <script src="../JS/scripts.js"></script>
+  <script src="../JS/testCategory.js"></script>
+
 </body>
 
 </html>
