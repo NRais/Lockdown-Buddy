@@ -97,11 +97,25 @@ testId = (id) => {
 }
 
 
-pickEmotion = (emotion) => {
+// NOTE: changed so that the button is passed as a parameter
+pickEmotion = (doc) => {
+
+    emotion = doc.id;
+
     emotions.map( currentEmotion => {
         if (currentEmotion.emotionName.includes(emotion)) {
             currentEmotion.emotionPicked = !currentEmotion.emotionPicked
+
             console.log(currentEmotion)
+
+            // change button color for selected or unselected
+            if (currentEmotion.emotionPicked == true) {
+                doc.style.background='#599CEB';
+                doc.style.color ='white';
+            } else {
+                doc.style.background='white';
+                doc.style.color ='#599CEB';
+            }
         }       
     })
 }
