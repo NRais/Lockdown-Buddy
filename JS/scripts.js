@@ -64,7 +64,7 @@ function drawWeather(data) {
 
   document.getElementById("description").innerHTML = data.weather[0].description;
   document.getElementById("temp").innerHTML = celcius + "&deg;";
-  document.getElementById("location").innerHTML = data.name;
+  document.getElementById("location").innerHTML = data.name;    // NOTE: dialogue will prompt you on frame2.html if you haven't entered a city (but in the meantime it will assume outdoor activities are alg)
 
   localStorage.setItem('celciusTemp', celcius);
 }

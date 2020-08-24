@@ -85,7 +85,17 @@ emotions = [
         emotionName: 'Jittery',
         emotionCategory: physicalCategoryVar,
         emotionPicked: false
-    }
+    },
+    {
+        emotionName: 'Depressed',
+        emotionCategory: emotionalCategoryVar,
+        emotionPicked: false
+    },
+    {
+        emotionName: 'Bored',
+        emotionCategory: mentalCategoryVar,
+        emotionPicked: false
+    },
 ]
 
 testButton = () => {
@@ -150,11 +160,12 @@ chooseCategory = () => {
 }
 
 chooseEmotionsPicked = (physical, mental, emotional) => {
-    console.log('reaching near the switch.')
+    console.log('reaching near the switch.') // NOTE: this log is never visible because page is immediately launched
+
     //function should check through the emotions and see if they have been clicked.
     sortMe = [physical, mental, emotional]
     chosenCategory = sortMe.sort((a, b) => b - a);
-    console.log(chosenCategory)
+
     if (chosenCategory[0] = physical) {
         saveCategoryAndNewPage('physical')
     } else if (chosenCategory[0] = mental) {
@@ -232,10 +243,12 @@ setTasksToChosenCategory = () => {
 
     console.log(celcius, outdoorsIsTrueToday)
 
+    // NOTE: final category is the highest ranked category (so 2 physical, 1 emotion will return physical)
     finalCategory = localStorage.getItem('chosenCategory')
+
     document.getElementById("draggables").innerHTML = "";
 
-    for(i = 0; i < activities.length; i++){
+    for(i = 0; i < activities.length; i++) {
         currentID = i.toString() 
 
         // currentActivityButton = document.getElementById("activity" + currentID).innerHTML
