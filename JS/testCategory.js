@@ -226,11 +226,11 @@ setTasksToChosenCategory = () => {
 
     var outdoorsIsTrueToday = false;
 
-    console.log(celcius)
-
     if (celcius > 12) {
         outdoorsIsTrueToday = true;
     }
+
+    console.log(celcius, outdoorsIsTrueToday)
 
     finalCategory = localStorage.getItem('chosenCategory')
     document.getElementById("draggables").innerHTML = "";
@@ -242,7 +242,9 @@ setTasksToChosenCategory = () => {
 
             console.log(finalCategory, activities[i].category)
 
-            if (activities[i].outdoorsRequired == outdoorsIsTrueToday) {
+            // if today you can go outside (then everything passes)
+            // or if its false and the activity is false (i.e doesn't require going outdoor, then we pass)
+            if (outdoorsIsTrueToday | activities[i].outdoorsRequired == outdoorsIsTrueToday) {
 
                 if (activities[i].category == finalCategory) {            
                     // document.getElementById("activity" + currentID).innerHTML = activities[i].activityName;
