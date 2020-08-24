@@ -18,17 +18,17 @@
 
 </head>
 
-<body onload="setTasksToChosenCategory();">
+<body onload="setTasksToChosenCategory(); submitLocation();">
   <div class="hero-nav">
 
     <!-- logo, text and button -->
      <img class="logo" src="../resources/logo.png" alt="custom_html_logo1">
 
-  
-      <button class="b1" type="button" style="right:40%">Button 1</button>
-      <button class="b1" type="button" style="right:30%">Button 2</button>
-      <button class="b1" type="button" style="right:20%">Button 3</button>
-      <button class="b1" type="button" style="right:10%">Button 4</button>
+      
+     <button class="b1" type="button" style="right:40%" onclick="window.location.href='../html/frame0.html';">Home</button>
+     <button class="b1" type="button" style="right:30%" onclick="window.location.href='../html/frame1.html';">Survey</button>
+     <button class="b1" type="button" style="right:20%">Map</button>
+     <button class="b1" type="button" style="right:10%">Login</button>
   </div>
 
 
@@ -84,17 +84,21 @@
   <h1>Here are some things you can do if you have free time:</h1>
   <p>Just drag and drop these cool things to your schedule!</p>
       <div id="activities">
-        <div class="draggables">
-            <div id="activity0" class="draggable" draggable="true">Meditate</div>
+        <div class="draggables" id="draggables">
+            <!-- <div id="activity0" class="draggable" draggable="true">Meditate</div>
             <div id="activity1" class="draggable" draggable="true">Swim</div>
             <div id="activity2" class="draggable" draggable="true">Walk</div>
             <div id="activity3" class="draggable" draggable="true">Yoga</div>
-            <div id="activity4" class="draggable" draggable="true">Breathing</div>
+            <div id="activity4" class="draggable" draggable="true">Breathing</div> -->
         </div>
       </div>
     </div>
-  
-  
+    <hr>
+  <div id="weather">
+    <p id="description"></p>
+    <p id="temp"></p>
+    <p id="location"></p>
+  </div>
 
   <script src="../JS/scripts.js"></script>
   <script src="../JS/testCategory.js"></script>

@@ -1,4 +1,19 @@
 
+function validate() {
+
+    // if there is nothing in the text fields we validate the form
+    if ((document.getElementById("cityName").value != "") 
+    && (document.getElementById("yourName").value != "")) {
+        chooseCategory(); 
+        storeLocation();
+    } else {
+      alert("Type a name and location to continue.")
+    }
+
+}
+
+
+
 // ------------------------------------------- //
 // Weather API
 // ------------------------------------------- //
@@ -7,9 +22,16 @@
 //   weatherBalloon("Wellington");
 // };
 
+function storeLocation() {
+  
+  let city = document.getElementById("cityName").value;
+
+  localStorage.setItem('cityName', city)
+}
+
 function submitLocation() {
   // alert("Hello!");
-  let city = document.getElementById("cityName").value;
+  let city = localStorage.getItem('cityName');
   weatherBalloon(city);
 }
 
@@ -43,6 +65,8 @@ function drawWeather(data) {
   document.getElementById("description").innerHTML = data.weather[0].description;
   document.getElementById("temp").innerHTML = celcius + "&deg;";
   document.getElementById("location").innerHTML = data.name;
+
+  localStorage.setItem('celciusTemp', celcius);
 }
 
 
@@ -53,7 +77,7 @@ function drawWeather(data) {
 // var mymap = L.map('map).setView([-41.28664, 174.77557], 13);
 
 // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="https://www.mapbox.com/">Mapbox</a>',
 //     maxZoom: 18,
 //     id: 'mapbox/streets-v11',
 //     tileSize: 512,
@@ -121,7 +145,7 @@ dragDropAreas.forEach(item => {
 // var mymap = L.map('map).setView([-41.28664, 174.77557], 13);
 
 // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="https://www.mapbox.com/">Mapbox</a>',
 //     maxZoom: 18,
 //     id: 'mapbox/streets-v11',
 //     tileSize: 512,

@@ -19,10 +19,11 @@
       <!-- logo, text and button -->
       <img class="logo" src="../resources/logo.png" alt="custom_html_logo1" />
 
-      <button class="b1" type="button" style="right: 40%;">Home</button>
-      <button class="b1" type="button" style="right: 30%;">About</button>
-      <button class="b1" type="button" style="right: 20%;">Login</button>
-      <button class="b1" type="button" style="right: 10%;">Help</button>
+      <button class="b1" type="button" style="right:40%" onclick="window.location.href='../html/frame0.html';">Home</button>
+      <button class="b1" type="button" style="right:30%" onclick="window.location.href='../html/frame1.html';">Survey</button>
+      <button class="b1" type="button" style="right:20%">Map</button>
+      <button class="b1" type="button" style="right:10%">Login</button>
+
     </div>
 
     <div id="main">
@@ -79,13 +80,13 @@
         </form>
         <div>
           <label> Enter Your Name: </label>
-          <input id="cityName" type="text" />
+          <input id="yourName" type="text" />
           <br />
           <label> Enter Your Location: </label>
-          <input id="locationName" type="text" />
+          <input id="cityName" type="text" />
         </div>
 
-        <button class="btn-result" onclick="chooseCategory()">ENTER RESULTS</button>
+        <button class="btn-result" onclick="validate()">ENTER RESULTS</button>
       </div>
     </div>
 

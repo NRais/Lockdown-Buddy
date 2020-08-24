@@ -14,7 +14,27 @@ activities = [
         category: physicalCategoryVar
     },
     {
+        activityName: 'FOOTBALL',
+        outdoorsRequired: true,
+        category: physicalCategoryVar
+    },
+    {
+        activityName: 'YOGA',
+        outdoorsRequired: false,
+        category: physicalCategoryVar
+    },
+    {
         activityName: 'SCRABBLE',
+        outdoors: false,
+        category: mentalCategoryVar
+    },
+    {
+        activityName: 'GAMING',
+        outdoors: false,
+        category: mentalCategoryVar
+    },
+    {
+        activityName: 'CODING',
         outdoors: false,
         category: mentalCategoryVar
     },
@@ -22,7 +42,27 @@ activities = [
         activityName: 'MEDITATION',
         outdoors: false,
         category: emotionalCategoryVar
-    }        
+    },
+    {
+        activityName: 'ACTING',
+        outdoors: false,
+        category: emotionalCategoryVar
+    },
+    {
+        activityName: 'WATCH MOVIE',
+        outdoors: false,
+        category: emotionalCategoryVar
+    },
+    {
+        activityName: 'PAINTING',
+        outdoors: false,
+        category: emotionalCategoryVar
+    },
+    {
+        activityName: 'WALK',
+        outdoors: true,
+        category: emotionalCategoryVar
+    }     
 ]
 
 emotions = [
@@ -108,7 +148,7 @@ chooseEmotionsPicked = (physical, mental, emotional) => {
     } else if (chosenCategory[0] = emotional) {
         saveCategoryAndNewPage('emotional')
     } else {
-        alert("Something went wrong.")
+        alert("Select an emotion to continue.")
     }
 
 }
@@ -128,8 +168,8 @@ listChosenCategory = () => {
 
 saveCategoryAndNewPage = (category) => {
     
-    saveUsername(document.getElementById("cityName").value)
-    saveLocation(document.getElementById("locationName").value)
+    saveUsername(document.getElementById("yourName").value)
+    saveLocation(document.getElementById("cityName").value)
 
     localStorage.setItem('chosenCategory', category)
     window.location.href = 'frame2.html'
@@ -167,27 +207,34 @@ THIS FUNCTION HAS THE PROBLEM. ONLY WORKS IF THE CHOSEN CATEGORY IS PHYSICAL.
 */
 
 setTasksToChosenCategory = () => {
+
+    var celcius = localStorage.getItem('celciusTemp');
+
+    var outdoorsIsTrueToday = false;
+
+    console.log(celcius)
+
+    if (celcius > 12) {
+        outdoorsIsTrueToday = true;
+    }
+
     finalCategory = localStorage.getItem('chosenCategory')
+    document.getElementById("draggables").innerHTML = "";
 
     for(i = 0; i < activities.length; i++){
         currentID = i.toString() 
 
-        currentActivityButton = document.getElementById("activity" + currentID).innerHTML
+        // currentActivityButton = document.getElementById("activity" + currentID).innerHTML
 
-        if (currentActivityButton != null) {
             console.log(finalCategory, activities[i].category)
 
-            if (activities[i].category == finalCategory) {            
-                document.getElementById("activity" + currentID).innerHTML = activities[i].activityName;
-                return;  
-            }     
-        } else {
-            return;
-        }     
+            if (activities[i].outdoorsRequired == outdoorsIsTrueToday) {
 
+                if (activities[i].category == finalCategory) {            
+                    // document.getElementById("activity" + currentID).innerHTML = activities[i].activityName;
+                    document.getElementById("draggables").innerHTML += `<div class="draggable" draggable="true">${activities[i].activityName}</div>`;
+                    
+                }    
+            }
     }
 }
-
-
-
-
