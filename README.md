@@ -33,7 +33,7 @@ We hope to see this app grow in future! We see a lot of flexibility and room to 
 
 # About the App
 
-<img src="https://github.com/Lockdown-Avengers/Lockdown-Buddy/blob/master/resources/vector-cartoon-funny-kiwi-character.jpg" width="15%" height="15%">
+<img src="https://github.com/Lockdown-Avengers/Lockdown-Buddy/blob/master/resources/character.jpg" width="15%" height="15%">
 
 - Try out the webapp
 

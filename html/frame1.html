@@ -17,19 +17,25 @@
   <body>
     <div class="hero-nav">
       <!-- logo, text and button -->
-      <img class="logo" src="../resources/logo.png" alt="custom_html_logo1" />
+      <img class="logo" src="../resources/logo.png" alt="custom_html_logo1" /> <!-- TODO fix logo to be transparent-->
 
-      <button class="b1" type="button" style="right: 40%;">Home</button>
-      <button class="b1" type="button" style="right: 30%;">About</button>
-      <button class="b1" type="button" style="right: 20%;">Login</button>
-      <button class="b1" type="button" style="right: 10%;">Help</button>
+      <button class="b1" type="button" style="right:40%" onclick="window.location.href='../html/frame0.html';">Home</button>
+      <button class="b1" type="button" style="right:30%" onclick="window.location.href='../html/frame1.html';">Survey</button>
+      <button class="b1" type="button" style="right:20%">Map</button>
+      <button class="b1" type="button" style="right:10%">Login</button>
+
     </div>
 
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    
     <div id="main">
       <div id="inputs">
         <div>
           <h2>Hello, how is your mood today?</h2>
         </div>
+
+        <!-- NOTE: icons at https://fontawesome.com/icons?d=gallery&q=emotions , also we are hoping to integrate kiwi icons-->
 
         <form id="icons-moods">
           <!-- energetic -->
@@ -38,18 +44,18 @@
             id="Energetic"
             class="Energetic btn-mood"
             name="Energetic"
-            onclick="pickEmotion(this.id)"
+            onclick="pickEmotion(this)"
           >
             <i class="far fa-meh-rolling-eyes mood-icon"></i>Energetic
           </button>
 
-          <!-- mental -->
+          <!-- smart -->
           <button
             type="button"
             id="Smart"
             class="Smart btn-mood"
             name="Smart"
-            onclick="pickEmotion(this.id)"
+            onclick="pickEmotion(this)"
           >
             <i class="far fa-meh-rolling-eyes mood-icon"></i>Mental
           </button>
@@ -60,7 +66,7 @@
             id="Wild"
             class="Wild btn-mood"
             name="Wild"
-            onclick="pickEmotion(this.id)"
+            onclick="pickEmotion(this)"
           >
             <i class="far fa-tired mood-icon"></i>Wild
           </button>
@@ -71,21 +77,45 @@
             id="Jittery"
             class="Jittery btn-mood"
             name="Jittery"
-            onclick="pickEmotion(this.id)"
+            onclick="pickEmotion(this)"
           >
             <i class="far fa-grimace mood-icon"></i>Jittery
+          </button>
+
+          <!-- depressed -->
+          <button
+            type="button"
+            id="Depressed"
+            class="Depressed btn-mood"
+            name="Depressed"
+            onclick="pickEmotion(this)"
+          >
+            <i class="far fa-frown-open mood-icon"></i>Depressed
+          </button>
+
+          <!-- bored -->
+          <button
+            type="button"
+            id="Bored"
+            class="Bored btn-mood"
+            name="Bored"
+            onclick="pickEmotion(this)"
+          >
+            <i class="far fa-flushed mood-icon"></i>Bored
           </button>
 
         </form>
         <div>
           <label> Enter Your Name: </label>
-          <input id="cityName" type="text" />
-          <br />
+          <input class="input" id="yourName" type="text" />
+          <br/><br/>
           <label> Enter Your Location: </label>
-          <input id="locationName" type="text" />
+          <input class="input" id="cityName" type="text" />
         </div>
 
-        <button class="btn-result" onclick="chooseCategory()">ENTER RESULTS</button>
+        <div class="result-nav">
+          <button class="btn-result" onclick="validate()">ENTER RESULTS</button>
+        </div>
       </div>
     </div>
 
